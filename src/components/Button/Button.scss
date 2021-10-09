@@ -1,0 +1,50 @@
+.Button {
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: #d8d8d8;
+    }
+
+    &:focus {
+        border-width: 2px;
+        border-color: #b3b3b3;
+        border-style: solid;
+    }
+
+    &:disabled {
+        color: rgba(127, 127, 127, 0.5);
+        background-color: #f2f2f2;
+    }
+
+    &-large {
+        padding: 0px 15px;
+        height: 36px;
+    }
+
+    &-small {
+        padding: 0px 8px;
+        height: 28px;
+    }
+
+    &-primary {
+        background-color: #ffcc00;
+
+        &:hover {
+            background-color: #f2c200;
+        }
+
+        &:focus {
+            border-color: #b38f00;
+        }
+    }
+}
+
+.Button_text {
+    margin: 0px 5px;
+}
