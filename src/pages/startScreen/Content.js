@@ -8,7 +8,7 @@ import Button from '../../components/Button/Button';
 const Content = () => {
     let history = useHistory();
     return (
-        <div className='Content'>
+        <div className='StartContent'>
             <Logo />
             <p>
                 Configure repository connection<br/>

@@ -16,7 +16,7 @@ const StartHeader = () => {
 
     return (
         <Header className='Header-default'>
-            <HeaderText text='School CI server'/>
+            <HeaderText text='School CI Server'/>
             <ButtonGroup>
                 <Button text='Settings' icon={ButtonIcons.Type.COG} size='small' onClick={handleClick}/>
             </ButtonGroup>
