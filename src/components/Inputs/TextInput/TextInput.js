@@ -1,10 +1,9 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import '../styles.scss';
 import ResetSvg from './Reset.js';
 import InputLabel from '../InputLabel.js';
 
-const TextInput = ({ label, placeholder, isRequired }) => {
-    const [value, setValue] = useState('');
+const TextInput = ({ label, placeholder, isRequired, value, setValue }) => {
     const inputRef = useRef(null);
     const handleResetClick = () => {
         setValue('');

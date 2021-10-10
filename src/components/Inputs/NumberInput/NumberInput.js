@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import InputLabel from "../InputLabel"
 import MeasureUnit from './MeasureUnit';
 
 
-const NumberInput = ({ label, defaultValue, unit }) => {
-    const [value, setValue] = useState(defaultValue);
-
+const NumberInput = ({ label, value, unit, setValue }) => {
     const handleInputChange = event => {
         setValue(event.target.value);
     }
