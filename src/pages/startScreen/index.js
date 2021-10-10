@@ -1,5 +1,14 @@
+import Content from "./Content";
+import StartHeader from "./Header/StartHeader";
+
+
 const StartScreen = () => {
-    return 'START SCREEN';
+    return (
+        <>
+            <StartHeader />
+            <Content/>
+        </>
+    );
 }
 
 
