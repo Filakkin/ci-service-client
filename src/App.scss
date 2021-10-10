@@ -1,5 +1,11 @@
+@import "_variables";
+
 .App {
   text-align: center;
+  padding: $main-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .App-logo {
