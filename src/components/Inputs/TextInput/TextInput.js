@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
-import './styles.scss';
+import '../styles.scss';
 import ResetSvg from './Reset.js';
-import InputLabel from './InputLabel.js';
+import InputLabel from '../InputLabel.js';
 
 const TextInput = ({ label, placeholder, isRequired }) => {
     const [value, setValue] = useState('');
