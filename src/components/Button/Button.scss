@@ -1,9 +1,10 @@
 .Button {
+    box-sizing: border-box;
     border-radius: 4px;
     background-color: #e6e6e6;
-    border: none;
     display: flex;
     flex-direction: row;
+    border-color: rgba(0, 0, 0, 0);
     justify-content: center;
     align-items: center;
 
