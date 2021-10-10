@@ -16,17 +16,19 @@ import Link from './components/Link/Link';
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <StartScreen/>
-        </Route>
-        <Route path="/settings">
-          <Settings/>
-        </Route>
-        <Route path="/build-history">
-          <BuildHistory/>
-        </Route>
-      </Switch>
+      <div className='App'>
+        <Switch>
+          <Route exact path="/">
+            <StartScreen />
+          </Route>
+          <Route path="/settings">
+            <Settings />
+          </Route>
+          <Route path="/build-history">
+            <BuildHistory />
+          </Route>
+        </Switch>
+      </div>
       <Footer>
         <FooterMenu>
           <Link url="#" text='Support' />

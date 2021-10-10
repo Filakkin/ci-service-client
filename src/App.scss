@@ -1,6 +1,17 @@
 @import "_variables";
 
+html, body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .App {
+  flex: 2;
   text-align: center;
   padding: $main-padding;
   display: flex;
