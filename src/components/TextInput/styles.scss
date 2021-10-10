@@ -1,0 +1,65 @@
+$padding-size: 36px;
+
+.TextInput {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    gap: 4px;
+}
+
+.TextInputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+
+.Input {
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: #d9d9d9;
+    border-style: solid;
+    padding-top: 9px;
+    padding-left: 11px;
+    padding-bottom: 9px;
+    padding-right: $padding-size;
+    min-width: 474px;
+    
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus, &:focus-visible {
+        border-color: #b3b3b3;
+        outline: none;
+    }
+}
+
+.InputLabel {
+    em {
+        color: #ff3333
+    }
+}
+
+.IconContainer {
+    padding: 10px;
+    margin-left: -$padding-size;
+
+    path {
+        fill: rgb(204, 204, 204);
+    }
+
+    &:hover {
+        path {
+            fill: darken(rgb(204, 204, 204), 5%);
+        }
+    }
+
+    &:hover {
+        path {
+            fill: darken(rgba(204, 204, 204, 0.2), 5%);
+        }
+    }
+}
