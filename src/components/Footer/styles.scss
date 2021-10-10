@@ -1,0 +1,24 @@
+@import '/src/variables';
+
+.Footer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: $main-padding;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #f0f2f3;
+}
+
+.FooterMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.Copyright {
+    color: #7f8285;
+}
