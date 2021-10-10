@@ -1,6 +1,6 @@
-import './Button.scss';
-import 'classnames';
 import classNames from 'classnames';
+
+import './Button.scss';
 import Icons from './Icons/Icons.js';
 
 const Button = ({ text, icon, size, isPrimary, disabled }) => {
