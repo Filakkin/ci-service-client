@@ -1,10 +1,9 @@
-import DefaultHeader from "./DefaultHeader/DefaultHeader";
-import ActiveHeader from "./ActiveHeader/ActiveHeader";
-
-
-const Header = ({ repository }) => {
-    return !!repository ?
-        <ActiveHeader text={repository}/> : <DefaultHeader/>
+const Header = ({ children }) => {
+    return (
+        <div className='Header'>
+            {children}
+        </div>
+    )
 }
 
 
