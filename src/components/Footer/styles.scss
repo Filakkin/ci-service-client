@@ -6,10 +6,12 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    min-width: min-content;
     padding: $main-padding;
     padding-top: 8px;
     padding-bottom: 8px;
     background-color: #f0f2f3;
+    margin-top: 8px;
 }
 
 .FooterMenu {
