@@ -1,3 +1,5 @@
+@import '/src/variables';
+
 .BuildHistoryHeader {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,23 @@
     align-content: center;
     align-items: center;
     margin: auto;
+}
+
+.BuildHistoryContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        .ButtonGroup {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .Button {
+            width: 100%;
+        }
+    }
 }
 
 .Modal {

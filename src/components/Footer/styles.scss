@@ -10,8 +10,18 @@
     padding: $main-padding;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #f0f2f3;
+    background-color: hsl(200, 11%, 95%);
     margin-top: 8px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        padding: $main-mobile-padding;
+        align-content: space-between;
+        align-items: space-between;
+        gap: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 }
 
 .FooterMenu {
@@ -19,6 +29,12 @@
     flex-direction: row;
     justify-content: space-evenly;
     gap: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        justify-content: flex-start;
+    }
 }
 
 .Copyright {
