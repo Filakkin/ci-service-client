@@ -25,3 +25,48 @@
         }
     }
 }
+
+.SettingsModal {
+    position: fixed;
+    background-color: rgba(0,0,0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.SettingsModalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: min-content;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 1px rgba($color: #434445, $alpha: .3), 0px 6px 16px rgba($color: #434445, $alpha: .3);
+
+    .Header {
+        padding: 0px;
+        white-space: nowrap;
+    }
+
+    .ButtonGroup {
+        align-self: center;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        .ButtonGroup {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .Button {
+            width: 100%;
+        }
+    }
+
+}
