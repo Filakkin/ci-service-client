@@ -8,7 +8,7 @@ const Settings = () => {
         <>
             <SettingsHeader />
             <AppContext.Consumer>
-                {({repository, setRepository}) => <Content repository={repository} setRepository={setRepository}/>}
+                {({state, dispatch}) => <Content state={state} dispatch={dispatch}/>}
             </AppContext.Consumer>
         </>
     );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,22 +16,19 @@ import Link from './components/Link/Link';
 import AppContext from './AppContext';
 
 function App() {
-  const [repository, setRepository] = useState('');
+  const [state, dispatch] = useReducer(reducer, {settings: {interval: 10}});
 
 
   return (
     <Router>
       <div className='App'>
         <Switch>
-          <AppContext.Provider value={{repository, setRepository}}>
+          <AppContext.Provider value={{state, dispatch}}>
             <Route exact path="/">
-              <StartScreen />
+              {!!state?.settings?.repository ? <BuildHistory /> : <StartScreen />}
             </Route>
             <Route path="/settings">
               <Settings />
-            </Route>
-            <Route path="/build-history">
-              <BuildHistory />
             </Route>
           </AppContext.Provider>
         </Switch>
@@ -46,6 +43,14 @@ function App() {
       </Footer>
     </Router>
   );
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+      case 'save_settings':
+          return { ...state, settings: action.value };
+      default:
+  }
 }
 
 export default App;
