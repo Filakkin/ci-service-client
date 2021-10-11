@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,21 +13,27 @@ import Footer from './components/Footer/Footer';
 import FooterMenu from './components/Footer/FooterMenu';
 import Copyright from './components/Footer/Copyright';
 import Link from './components/Link/Link';
+import AppContext from './AppContext';
 
 function App() {
+  const [repository, setRepository] = useState('');
+
+
   return (
     <Router>
       <div className='App'>
         <Switch>
-          <Route exact path="/">
-            <StartScreen />
-          </Route>
-          <Route path="/settings">
-            <Settings />
-          </Route>
-          <Route path="/build-history">
-            <BuildHistory />
-          </Route>
+          <AppContext.Provider value={{repository, setRepository}}>
+            <Route exact path="/">
+              <StartScreen />
+            </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/build-history">
+              <BuildHistory />
+            </Route>
+          </AppContext.Provider>
         </Switch>
       </div>
       <Footer>
