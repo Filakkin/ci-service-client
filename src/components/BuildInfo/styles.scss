@@ -9,6 +9,10 @@ $shadow-color:rgba($color: #434445, $alpha: .3);
     display: flex;
     flex-direction: row;
     gap: 4px;
+
+    &:hover {
+        box-shadow: 0px 0px 1px $shadow-color, 0px 2px 8px $shadow-color;
+    }
 }
 
 .DateTime {
@@ -55,7 +59,7 @@ $shadow-color:rgba($color: #434445, $alpha: .3);
         color: #00b341;
     }
 
-    &-running {
+    &-building {
         color: #ff9a00;
     }
 

@@ -7,7 +7,8 @@ const Button = ({ text, icon, size, isPrimary, disabled, onClick, type }) => {
     const buttonClass = classNames({
         'Button': true,
         [`Button-${size}`]: true,
-        'Button-primary': isPrimary
+        [`Button-${isPrimary ? 'primary' : 'secondary'}`]: true,
+
     });
     var Icon = Icons[icon];
 

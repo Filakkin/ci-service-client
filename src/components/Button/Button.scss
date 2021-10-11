@@ -1,7 +1,6 @@
 .Button {
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: #e6e6e6;
     display: flex;
     flex-direction: row;
     border-color: rgba(0, 0, 0, 0);
@@ -9,13 +8,8 @@
     align-items: center;
     width: min-content;
 
-    &:hover {
-        background-color: #d8d8d8;
-    }
-
     &:focus {
         border-width: 2px;
-        border-color: #b3b3b3;
         border-style: solid;
     }
 
@@ -43,6 +37,18 @@
 
         &:focus {
             border-color: #b38f00;
+        }
+    }
+
+    &-secondary {
+        background-color: #e6e6e6;
+
+        &:hover {
+            background-color: #d8d8d8;
+        }
+
+        &:focus {
+            border-color: #b3b3b3;
         }
     }
 }

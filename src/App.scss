@@ -8,6 +8,12 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
+}
+
+#modal {
+  position: relative;
+  z-index: 999;
 }
 
 .App {

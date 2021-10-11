@@ -1,0 +1,45 @@
+.BuildHistoryHeader {
+    display: flex;
+    flex-direction: column;
+    justify-self:center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.Modal {
+    position: fixed;
+    background-color: rgba(0,0,0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-self:center;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+}
+
+.ModalContent {
+    max-width: min-content;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 1px rgba($color: #434445, $alpha: .3), 0px 6px 16px rgba($color: #434445, $alpha: .3);
+
+    .Header {
+        padding: 0px;
+    }
+
+    .Button {
+        &-secondary {
+            background-color: #ffffff;
+            border-color: rgba($color: #000000, $alpha: .2);
+        }
+    }
+
+}
