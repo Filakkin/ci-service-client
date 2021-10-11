@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import './App.scss';
 import StartScreen from './pages/startScreen';
@@ -15,20 +15,20 @@ import FooterMenu from './components/Footer/FooterMenu';
 import Copyright from './components/Footer/Copyright';
 import Link from './components/Link/Link';
 import AppContext from './AppContext';
-import store from './app/store';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, { settings: { interval: 10 } });
-
+  const { settings } = useSelector((state) => {
+    console.log(state);
+    return state});
 
   return (
-    <Provider store={store}>
       <Router>
         <div className='App'>
           <Switch>
             <AppContext.Provider value={{ state, dispatch }}>
               <Route exact path="/">
-                {!!state?.settings?.repository ? <BuildHistory /> : <StartScreen />}
+                {!!settings?.repository ? <BuildHistory /> : <StartScreen />}
               </Route>
               <Route path="/settings">
                 <Settings />
@@ -45,7 +45,6 @@ function App() {
           <Copyright holder='Kalifkin Stanislav' />
         </Footer>
       </Router>
-    </Provider>
   );
 }
 
