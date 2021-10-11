@@ -1,5 +1,9 @@
 @import '/src/variables';
 
+.Settings {
+    height: 100%;
+}
+
 .SettingsContent {
     display: flex;
     flex-direction: column;

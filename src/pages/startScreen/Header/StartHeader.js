@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 
+import '../styles.scss';
 import Header from "../../../components/Headers/Header";
 import HeaderText from "../../../components/Headers/HeaderText";
 import Button from "../../../components/Button/Button";
@@ -15,7 +16,7 @@ const StartHeader = () => {
     }
 
     return (
-        <Header className='Header-default'>
+        <Header>
             <HeaderText text='School CI Server'/>
             <ButtonGroup>
                 <Button text='Settings' icon={ButtonIcons.Type.COG} size='small' onClick={handleClick}/>

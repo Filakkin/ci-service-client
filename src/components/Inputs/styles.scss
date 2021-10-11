@@ -1,4 +1,4 @@
-@import '/src/_variables';
+@import "/src/_variables";
 $padding-size: 36px;
 
 .NumberInput {
@@ -60,7 +60,8 @@ $padding-size: 36px;
         color: rgba(0, 0, 0, 0.2);
     }
 
-    &:focus, &:focus-visible {
+    &:focus,
+    &:focus-visible {
         border-color: #b3b3b3;
         outline: none;
     }
@@ -69,7 +70,7 @@ $padding-size: 36px;
 .InputLabel {
     text-align: left;
     em {
-        color: #ff3333
+        color: #ff3333;
     }
 }
 
