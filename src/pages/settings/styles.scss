@@ -1,0 +1,15 @@
+.SettingsContent {
+    display: flex;
+    flex-direction: column;
+    justify-self:left;
+    align-items: flex-start;
+    margin: auto;
+
+    h3 {
+        margin-bottom: 0px;
+    }
+
+    p {
+        color: #7f8285;
+    }
+}
