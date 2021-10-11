@@ -1,6 +1,8 @@
 import { useState, useReducer } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 
+import { saveSettings } from "./reducers";
 import './styles.scss';
 import TextInput from "../../components/Inputs/TextInput/TextInput";
 import NumberInput from "../../components/Inputs/NumberInput/NumberInput";
@@ -9,9 +11,10 @@ import Button from "../../components/Button/Button";
 import Modal from "./Modal";
 
 
-const Content = ({ state, dispatch }) => {
+const Content = ( ) => {
     let history = useHistory();
-    const { settings } = state
+    const { settings } = useSelector((state) => state);
+    const dispatch = useDispatch();
     const [showError, setShowError] = useState(false);
     const [fields, fieldDispatch] = useReducer(
         reducer,
@@ -30,7 +33,7 @@ const Content = ({ state, dispatch }) => {
         }
         let value = {};
         Object.keys(fields).forEach(key => value[key] = fields[key].value);
-        dispatch({ type: 'save_settings', value });
+        dispatch(saveSettings(value));
         history.push("/");
     }
 

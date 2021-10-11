@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './App.scss';
 import StartScreen from './pages/startScreen';
@@ -16,40 +17,42 @@ import Link from './components/Link/Link';
 import AppContext from './AppContext';
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, {settings: {interval: 10}});
-
+  const [state, dispatch] = useReducer(reducer, { settings: { interval: 10 } });
+  const { settings } = useSelector((state) => {
+    console.log(state);
+    return state});
 
   return (
-    <Router>
-      <div className='App'>
-        <Switch>
-          <AppContext.Provider value={{state, dispatch}}>
-            <Route exact path="/">
-              {!!state?.settings?.repository ? <BuildHistory /> : <StartScreen />}
-            </Route>
-            <Route path="/settings">
-              <Settings />
-            </Route>
-          </AppContext.Provider>
-        </Switch>
-      </div>
-      <Footer>
-        <FooterMenu>
-          <Link url="#" text='Support' />
-          <Link url="#" text='Learning' />
-          <Link url="#" text='Русская версия' />
-        </FooterMenu>
-        <Copyright holder='Kalifkin Stanislav' />
-      </Footer>
-    </Router>
+      <Router>
+        <div className='App'>
+          <Switch>
+            <AppContext.Provider value={{ state, dispatch }}>
+              <Route exact path="/">
+                {!!settings?.repository ? <BuildHistory /> : <StartScreen />}
+              </Route>
+              <Route path="/settings">
+                <Settings />
+              </Route>
+            </AppContext.Provider>
+          </Switch>
+        </div>
+        <Footer>
+          <FooterMenu>
+            <Link url="#" text='Support' />
+            <Link url="#" text='Learning' />
+            <Link url="#" text='Русская версия' />
+          </FooterMenu>
+          <Copyright holder='Kalifkin Stanislav' />
+        </Footer>
+      </Router>
   );
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
-      case 'save_settings':
-          return { ...state, settings: action.value };
-      default:
+    case 'save_settings':
+      return { ...state, settings: action.value };
+    default:
   }
 }
 
