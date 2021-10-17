@@ -6,7 +6,6 @@ import Button from "../../../components/Button/Button";
 
 
 const Content = ({onRun: onOk}) => {
-
     return (
         <div className='SettingsModal'>
             <div className='SettingsModalContent'>

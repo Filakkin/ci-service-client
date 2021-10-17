@@ -4,6 +4,7 @@ import '../styles.scss';
 import ResetSvg from './Reset.js';
 import InputLabel from '../InputLabel.js';
 
+
 const TextInput = ({ label, placeholder, isRequired, value, setValue }) => {
     const inputRef = useRef(null);
     const handleResetClick = () => {
@@ -24,7 +25,6 @@ const TextInput = ({ label, placeholder, isRequired, value, setValue }) => {
         </div>
     );
 }
-
 
 
 export default TextInput;

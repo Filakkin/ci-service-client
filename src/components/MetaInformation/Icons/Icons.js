@@ -3,12 +3,14 @@ import { ReactComponent as Commit } from './16_code-commit.svg';
 import { ReactComponent as Stopwatch } from './16_stopwatch.svg';
 import { ReactComponent as User } from './16_user.svg';
 
+
 const _Icons = {
     calendar: Calendar,
     commit: Commit,
     stopwatch: Stopwatch,
     user: User
 }
+
 const Icons = {
     ..._Icons,
     Type: {
@@ -18,5 +20,6 @@ const Icons = {
         USER: 'user'
     }
 }
+
 
 export default Icons;

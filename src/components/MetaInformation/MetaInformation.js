@@ -1,6 +1,6 @@
+import './styles.scss';
 import Icons from "./Icons/Icons";
 import Text from "../Text";
-import './styles.scss';
 
 
 const MetaInformation = ({ icon, primaryText, secondaryText }) => {

@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: 8px;
     padding: 4px;
-    overflow:scroll;
+    overflow-y:auto;
 
     @media screen and (max-width: $mobile-breakpoint) {
         .ButtonGroup {

@@ -1,5 +1,6 @@
 import './styles.scss';
 
+
 const InputLabel = ({ label, isRequired }) => {
     return (
         <div className='InputLabel'>
@@ -7,5 +8,6 @@ const InputLabel = ({ label, isRequired }) => {
         </div>
     )
 }
+
 
 export default InputLabel;

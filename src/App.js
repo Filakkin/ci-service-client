@@ -15,9 +15,9 @@ import Copyright from './components/Footer/Copyright';
 import Link from './components/Link/Link';
 import AppContext from './AppContext';
 
+
 function App() {
   const [state, dispatch] = useReducer(reducer, {settings: {interval: 10}});
-
 
   return (
     <Router>

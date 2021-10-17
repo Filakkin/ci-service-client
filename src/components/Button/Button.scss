@@ -1,14 +1,14 @@
 @import '/src/_variables';
 
 .Button {
-    box-sizing: border-box;
-    border-radius: 4px;
+    width: min-content;
     display: flex;
     flex-direction: row;
-    border-color: rgba(0, 0, 0, 0);
     justify-content: center;
     align-items: center;
-    width: min-content;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-color: rgba(0, 0, 0, 0);
 
     &:focus {
         border-width: 2px;

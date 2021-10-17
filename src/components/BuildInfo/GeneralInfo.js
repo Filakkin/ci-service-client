@@ -3,8 +3,6 @@ import CommitMeta from './CommitMeta';
 
 
 const GeneralInfo = ({ buildInfo, commitInfo }) => {
-
-
     return (
         <div className='GeneralInfo'>
             <BuildMeta number={buildInfo?.number} status={buildInfo?.status} name={commitInfo?.message}/>
