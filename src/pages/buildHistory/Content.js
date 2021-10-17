@@ -1,17 +1,33 @@
+import { useState, useEffect } from 'react';
+
+
 import './styles.scss';
 import BuildInfo from "../../components/BuildInfo/BuildInfo"
 import Button from "../../components/Button/Button";
+import { fetchBuilds } from '../../stub/api/fetchBuilds';
 
 
-const Content = ({ showModal, setShowModal }) => {
+const renderBuildInfoList = (history) => {
+    return history.map((build, i) => <BuildInfo props={build} key={i}/>) || [];
+}
+
+
+const Content = ({ buildHistory, dispatch, showModal, setShowModal }) => {
+    const [fetching, setFetching] = useState(true);
+    const [history, setHistory] = useState([]);
+
+    useEffect(() => {
+        setHistory(buildHistory)
+        setFetching(false)
+    }, [buildHistory]);
+    
     return (
         <div className='BuildHistoryContent'>
-            <BuildInfo props={{commitInfo:{message: 'Fix', author: 'Frank', branch: 'main', hash: '914123adsf'}, buildInfo: {status: 'done', number: 1984, startDate: '10 окт 2021, 22:00', duration: '15 мин'}}}/>
-            <BuildInfo props={{commitInfo:{message: 'add new function', author: 'Frank', branch: 'main', hash: 'sdf123adsf'}, buildInfo: {status: 'building', number: 1983, startDate: '10 окт 2021, 22:00', duration: '15 мин'}}}/>
-            <BuildInfo props={{commitInfo:{message: 'sleep deprevation', author: 'Frank', branch: 'main', hash: 'aev123adsf'}, buildInfo: {status: 'error', number: 1982, startDate: '10 окт 2021, 22:00', duration: '15 мин'}}}/>
-            <Button size='small' text='Show more'/>
+            {renderBuildInfoList(history)}
+            {fetching ? 'Please wait' : <Button size='small' text='Show more' onClick={() => {
+                dispatch({type: 'add', value: fetchBuilds(5)}); setFetching(true)}}/>}
         </div>
-    )
+    );
 }
 
 

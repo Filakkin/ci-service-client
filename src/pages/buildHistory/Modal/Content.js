@@ -20,7 +20,7 @@ const Content = ({onRun, onCancel}) => {
             <p>Enter the commit has which you want to build.</p>
             <TextInput placeholder='Commit hash' value={hash} setValue={setHash}/>
             <ButtonGroup>
-                <Button size='large' text='Run build' onClick={onRun} isPrimary/>
+                <Button size='large' text='Run build' onClick={onRun(hash)} isPrimary/>
                 <Button size='large' text='Cancel' onClick={onCancel} />
             </ButtonGroup>
             </div>

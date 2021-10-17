@@ -7,7 +7,7 @@ import Button from "../../../components/Button/Button";
 import ButtonIcons from "../../../components/Button/Icons/Icons";
 
 
-const BuildHistoryHeader = ({ repository, handleRun }) => {
+const BuildHistoryHeader = ({ repository, setShowModal }) => {
     let history = useHistory();
 
     const handleSettingsClick = () => {
@@ -18,7 +18,7 @@ const BuildHistoryHeader = ({ repository, handleRun }) => {
         <Header>
             <HeaderText text={repository} />
             <ButtonGroup>
-                <Button icon={ButtonIcons.Type.PLAY} text={'Run build'} size='small' onClick={handleRun}/>
+                <Button icon={ButtonIcons.Type.PLAY} text={'Run build'} size='small' onClick={() => setShowModal(true)}/>
                 <Button icon={ButtonIcons.Type.COG} size='small' onClick={handleSettingsClick} />
             </ButtonGroup>
         </Header>

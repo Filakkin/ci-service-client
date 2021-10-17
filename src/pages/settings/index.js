@@ -8,7 +8,9 @@ const Settings = () => {
         <div className="Settings">
             <SettingsHeader />
             <AppContext.Consumer>
-                {({state, dispatch}) => <Content state={state} dispatch={dispatch}/>}
+                {
+                    ({ state, dispatch }) => <Content state={state} dispatch={dispatch} />
+                }
             </AppContext.Consumer>
         </div>
     );
