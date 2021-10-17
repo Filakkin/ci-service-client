@@ -2,7 +2,7 @@ import { useState, useReducer } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 
-import { saveSettings } from "./reducers";
+import { saveSettings } from "./reducer";
 import './styles.scss';
 import TextInput from "../../components/Inputs/TextInput/TextInput";
 import NumberInput from "../../components/Inputs/NumberInput/NumberInput";

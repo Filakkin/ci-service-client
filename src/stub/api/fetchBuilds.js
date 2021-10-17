@@ -11,7 +11,7 @@ const getRandomNumber = (min, max) => {
 let initialBuild = getRandomNumber(10, 3000);
 let buildCount = initialBuild;
 
-export const fetchBuilds = (limit) => {
+export const asyncFetchBuilds = async (limit) => {
     return Array.from({length: limit}).map(_ => generateOldBuild()).filter(info => info !== null);
 }
 
