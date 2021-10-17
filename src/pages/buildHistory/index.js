@@ -23,7 +23,7 @@ const BuildHistory = () => {
     return (
         <>
             <Context.Provider value={{ buildHistory, dispatch }}>
-                <BuildHistoryHeader repository={repository} handleRun={handleRun} />
+                <BuildHistoryHeader repository={repository} onRunClick={() => setShowModal(true)} />
                 <Context.Consumer>
                     {({ buildHistory, dispatch }) => <Content buildHistory={buildHistory} dispatch={dispatch} />}
                 </Context.Consumer>
