@@ -2,6 +2,10 @@
 
 .Settings {
     height: 100%;
+
+    .HeaderText{
+        color: $text-color;
+    }
 }
 
 .SettingsContent {
@@ -15,7 +19,7 @@
     }
 
     p {
-        color: #7f8285;
+        color: $text-color;
     }
 
     @media screen and (max-width: $mobile-breakpoint) {
@@ -51,7 +55,7 @@
     background-color: #ffffff;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0px 0px 1px rgba($color: #434445, $alpha: .3), 0px 6px 16px rgba($color: #434445, $alpha: .3);
+    box-shadow: 0px 0px 1px $shadow-color, 0px 6px 16px $shadow-color;
 
     .Header {
         padding: 0px;

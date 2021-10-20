@@ -1,5 +1,7 @@
+@import '/src/variables';
+
 .Link {
-    color: #7f8285;
+    color: $text-color;
     text-decoration: none;
 
     &:hover, &:focus {
