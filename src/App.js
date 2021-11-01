@@ -21,7 +21,8 @@ function App() {
   const [state, dispatch] = useReducer(reducer, { settings: { interval: 10 } });
   const { settings } = useSelector((state) => {
     console.log(state);
-    return state});
+    return state
+  });
 
   return (
       <Router>
